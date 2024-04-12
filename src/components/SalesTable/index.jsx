@@ -7,7 +7,7 @@ import salesData from "../../data/salesData.json";
 
 const SalesTable = () => {
   return (
-    <Table sx={{ minWidth: 600, textAlign: "center" }} aria-label="simple table">
+    <Table sx={{ minWidth: 600, textAlign: "center", height: 50 }}>
       <TableHead>
         <TableRow textAlign="center">
           <TableCell>Item Category</TableCell>
@@ -21,10 +21,10 @@ const SalesTable = () => {
           <TableRow
             key={row.itemName}
             sx={{
-                
-                "&:last-child td, &:last-child th": { border: 0 },
-            textAlign: "center"}}
-      
+              "&:last-child td, &:last-child th": { border: 0 },
+              textAlign: "center",
+            //   border: "0"
+            }}
           >
             <TableCell>{row.itemName}</TableCell>
             <TableCell component="th" scope="row">

@@ -14,7 +14,7 @@ const CustomMenuItem = ({ title, icon, selected, setSelected }) => {
         <ImageIcon iconUrl={icon} altText={title} />
         <Typography> {title}</Typography>
       </Link>
-      {title == 'Theme' && <ThemeToggle />}
+      {title === 'Theme' && <ThemeToggle />}
     </MenuItem>
   );
 };

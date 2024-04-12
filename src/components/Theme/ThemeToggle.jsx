@@ -1,4 +1,3 @@
-import { Box } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import Switch from "@mui/material/Switch";
 import { ColorModeContext } from "../../theme";

@@ -33,9 +33,10 @@ const BarChart1 = () => {
   return (
     <BarChart
       width={500}
-      height={300}
+      height={290}
       series={[{ data: revenueData, id: "revenueId" }]}
       xAxis={[{ data: months, scaleType: "band" }]}
+      grid={{ horizontal: true, vertical: true }}
     />
   );
 };

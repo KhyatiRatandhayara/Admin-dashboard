@@ -1,4 +1,4 @@
-import { Box,Divider, useTheme } from "@mui/material";
+import { Box, Divider, useTheme } from "@mui/material";
 import UserProfile from "../../components/UserProfile";
 import FilterSection from "../../components/FilterSection";
 import AverageDetails from "../../components/AverageDetails";
@@ -7,6 +7,7 @@ import { tokens } from "../../theme";
 import PopularSales from "../../components/PopularSales";
 import SalesCategory from "../../components/SalesCategory";
 import DataGrid1 from "../../components/DataGrid";
+import StockWeather from "../../components/StockWeather";
 
 const Dashboard = () => {
   const theme = useTheme();
@@ -60,8 +61,7 @@ const Dashboard = () => {
           alignItems="center"
           justifyContent="center"
         >
-           
-         <SalesCategory />
+          <SalesCategory />
         </Box>
         <Box
           gridColumn="span 4"
@@ -70,8 +70,7 @@ const Dashboard = () => {
           alignItems="center"
           justifyContent="center"
         >
-          <DataGrid1 />
-         
+        <StockWeather />
         </Box>
         <Box
           gridColumn="span 4"
@@ -79,9 +78,7 @@ const Dashboard = () => {
           display="flex"
           alignItems="center"
           justifyContent="center"
-        >
-         
-        </Box>
+        ></Box>
       </Box>
     </>
   );
