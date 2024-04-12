@@ -22,7 +22,7 @@ const CustomDatePicker = ({ type }) => {
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <DemoItem label={`select date ${type}`}>
         <DatePicker
-          sx={{ width: 260 }}
+       
           slotProps={{
             field: { clearable: true, onClear: () => setCleared(true) },
           }}

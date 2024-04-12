@@ -4,7 +4,7 @@ import SalesTable from "../SalesTable";
 
 const PopularSales = () => {
   return (
-        <Grid container spacing={2}>
+        <Grid container>
           <Grid item>
             <Typography variant="h3" fontWeight="600">
               Top Popular Sale Items

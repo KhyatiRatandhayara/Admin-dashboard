@@ -3,8 +3,8 @@ import { FormControl, InputLabel, Select, MenuItem } from '@mui/material';
 
 const CustomDropdown = () => {
   return (
-    <FormControl variant="outlined" sx={{ m: 1, width: 300 }}>
-    <InputLabel id="demo-simple-select-outlined-label">Dropdown 1</InputLabel>
+    <FormControl variant="filled" fullWidth>
+    <InputLabel id="demo-simple-select-outlined-label">Select a store</InputLabel>
     <Select
       labelId="demo-simple-select-outlined-label"
       id="demo-simple-select-outlined"

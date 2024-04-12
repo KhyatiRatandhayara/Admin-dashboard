@@ -1,4 +1,3 @@
-import React from "react";
 import { BarChart } from "@mui/x-charts";
 
 const revenueData = [
@@ -29,7 +28,7 @@ const months = [
   "Nov",
   "Dec",
 ];
-const BarChart1 = () => {
+const CustomBarChart = () => {
   return (
     <BarChart
       width={500}
@@ -41,4 +40,4 @@ const BarChart1 = () => {
   );
 };
 
-export default BarChart1;
+export default CustomBarChart;

@@ -28,8 +28,8 @@ function PieCenterLabel({ children }) {
   );
 }
 
-const PieChart1 = () => {
-    const totalValue = data1.reduce((acc, cur) => acc + cur.value, 0);
+const CustomPieChart = () => {
+  const totalValue = data1.reduce((acc, cur) => acc + cur.value, 0);
   return (
     <PieChart
       series={[
@@ -39,7 +39,7 @@ const PieChart1 = () => {
           innerRadius: 40,
         },
       ]}
-      height={300}
+      height={250}
       slotProps={{
         legend: {
           direction: "row",
@@ -47,43 +47,42 @@ const PieChart1 = () => {
           padding: 0,
         },
         pie: {
-            elements: {
-              arc: {
-                content: (
-                  <g>
-                    {data1.map((item, index) => {
-                      const angle =
-                        (item.value / totalValue) * (Math.PI * 2); // Calculate angle
-                      const midAngle = angle / 2; // Calculate mid angle
-                      const textX = Math.cos(midAngle) * 60; // X coordinate for text
-                      const textY = Math.sin(midAngle) * 60; // Y coordinate for text
-                      return (
-                        <React.Fragment key={index}>
-                          <text
-                            x={textX}
-                            y={textY}
-                            fill="black"
-                            textAnchor="middle"
-                            dominantBaseline="middle"
-                            fontSize="10px"
-                          >
-                            {`${(item.value / totalValue) * 100}%`}
-                          </text>
-                          <line
-                            x1={Math.cos(midAngle) * 40}
-                            y1={Math.sin(midAngle) * 40}
-                            x2={Math.cos(midAngle) * 70}
-                            y2={Math.sin(midAngle) * 70}
-                            stroke="black"
-                          />
-                        </React.Fragment>
-                      );
-                    })}
-                  </g>
-                ),
-              },
+          elements: {
+            arc: {
+              content: (
+                <g>
+                  {data1.map((item, index) => {
+                    const angle = (item.value / totalValue) * (Math.PI * 2); // Calculate angle
+                    const midAngle = angle / 2; // Calculate mid angle
+                    const textX = Math.cos(midAngle) * 60; // X coordinate for text
+                    const textY = Math.sin(midAngle) * 60; // Y coordinate for text
+                    return (
+                      <React.Fragment key={index}>
+                        <text
+                          x={textX}
+                          y={textY}
+                          fill="black"
+                          textAnchor="middle"
+                          dominantBaseline="middle"
+                          fontSize="10px"
+                        >
+                          {`${(item.value / totalValue) * 100}%`}
+                        </text>
+                        <line
+                          x1={Math.cos(midAngle) * 40}
+                          y1={Math.sin(midAngle) * 40}
+                          x2={Math.cos(midAngle) * 70}
+                          y2={Math.sin(midAngle) * 70}
+                          stroke="red"
+                        />
+                      </React.Fragment>
+                    );
+                  })}
+                </g>
+              ),
             },
           },
+        },
       }}
     >
       <PieCenterLabel>100%</PieCenterLabel>
@@ -91,4 +90,4 @@ const PieChart1 = () => {
   );
 };
 
-export default PieChart1;
+export default CustomPieChart;

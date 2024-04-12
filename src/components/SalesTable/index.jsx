@@ -7,7 +7,7 @@ import salesData from "../../data/salesData.json";
 
 const SalesTable = () => {
   return (
-    <Table sx={{ minWidth: 600, textAlign: "center", height: 50 }}>
+    <Table sx={{ minWidth: 600, textAlign: "center", height: 20, lineHeight:10 }}>
       <TableHead>
         <TableRow textAlign="center">
           <TableCell>Item Category</TableCell>

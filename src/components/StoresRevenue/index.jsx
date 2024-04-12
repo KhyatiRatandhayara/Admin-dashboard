@@ -9,7 +9,6 @@ const StoresRevenue = () => {
       <Typography variant="h4" sx={{ color: colors.grey[100] }}>
         Stores Revenue
       </Typography>
-
       <DataGrid1 />
     </Grid>
   );
