@@ -1,0 +1,23 @@
+[
+  {
+    "icon": "/assets/icons/total-revenues.png",
+    "name": "Total Revenue",
+    "number": 150000
+  },
+  {
+    "icon": "/assets/icons/people-visited.png",
+    "name": "People Visited",
+    "number": 5000
+  },
+
+  {
+    "icon": "/assets/icons/stores.png",
+    "name": "Average Per Store Day",
+    "number": 300
+  },
+  {
+    "icon": "/assets/icons/UPSD.png",
+    "name": "Unit Per Store Day",
+    "number": 50
+  }
+]

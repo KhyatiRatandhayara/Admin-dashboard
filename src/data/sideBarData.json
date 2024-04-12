@@ -1,0 +1,35 @@
+[
+    {
+      "name": "Dashboard",
+      "icon": "/assets/icons/dashboard.png"
+    },
+    {
+      "name": "Sales",
+      "icon": "/assets/icons/sales.png"
+    },
+    {
+      "name": "Products",
+      "icon": "/assets/icons/products.png"
+    },
+    {
+      "name": "Stores",
+      "icon": "/assets/icons/stores.png"
+    },
+    {
+      "name": "Campaign",
+      "icon": "/assets/icons/campaign.png"
+    },
+    {
+      "name": "Notifications",
+      "icon": "/assets/icons/notification.png"
+    },
+    {
+      "name": "Settings",
+      "icon": "/assets/icons/settings.png"
+    },
+    {
+      "name": "Theme",
+      "icon": "/assets/icons/theme.png"
+    }
+  ]
+  
