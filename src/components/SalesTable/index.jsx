@@ -4,12 +4,13 @@ import TableCell from "@mui/material/TableCell";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import salesData from "../../data/salesData.json";
+import HorizontalProgressBar from "../HorizontalProgressBar";
 
 const SalesTable = () => {
   return (
-    <Table sx={{ minWidth: 600, textAlign: "center", height: 20, lineHeight:10 }}>
+    <Table sx={{ minWidth: 350 }}>
       <TableHead>
-        <TableRow textAlign="center">
+        <TableRow >
           <TableCell>Item Category</TableCell>
           <TableCell>APSD</TableCell>
           <TableCell>UPSD</TableCell>
@@ -23,15 +24,16 @@ const SalesTable = () => {
             sx={{
               "&:last-child td, &:last-child th": { border: 0 },
               textAlign: "center",
-            //   border: "0"
             }}
           >
-            <TableCell>{row.itemName}</TableCell>
-            <TableCell component="th" scope="row">
+            <TableCell sx={{ padding: "10px"}}>{row.itemName}</TableCell>
+            <TableCell sx={{ padding: "10px"}} component="th" scope="row">
               {row.salesAmount}
             </TableCell>
-            <TableCell>{row.quantity}</TableCell>
-            <TableCell>{row.SKUStockRange}</TableCell>
+            <TableCell sx={{ padding: "10px"}}>{row.quantity}</TableCell>
+            <TableCell sx={{ padding: "10px"}}>
+            <HorizontalProgressBar percentage={row.SKUStockRange}/>
+            </TableCell>
           </TableRow>
         ))}
       </TableBody>

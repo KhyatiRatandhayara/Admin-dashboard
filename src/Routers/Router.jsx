@@ -10,7 +10,7 @@ import Settings from "../pages/Settings";
 const Router = () => {
   return (
     <Routes>
-      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/" element={<Dashboard />} />
       <Route path="/sales" element={<Sales />} />
       <Route path="/products" element={<Products />} />
       <Route path="/stores" element={<Stores />} />

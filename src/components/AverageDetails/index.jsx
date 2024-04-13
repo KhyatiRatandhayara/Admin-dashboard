@@ -1,4 +1,4 @@
-import { Box, useTheme } from "@mui/material";
+import { Grid, useTheme } from "@mui/material";
 import { tokens } from "../../theme";
 
 import AverageBox from "../AverageBox";
@@ -8,28 +8,33 @@ const AverageDetails = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   return (
-    <Box
-      display="grid"
-      gridTemplateColumns="repeat(12, 1fr)"
+    <Grid
+      container
+      spacing={2}
       gridAutoRows="140px"
-      gap="20px"
+      gridTemplateColumns="repeat(12, 1fr)"
     >
       {averageData.map((item) => (
-        <Box
-          gridColumn="span 3"
-          backgroundColor={colors.primary[400]}
+        <Grid
+          item
+          md={3}
+          sm={6}
+          xs={12}
           display="flex"
+          backgroundColor={colors.primary[400]}
           alignItems="center"
           justifyContent="center"
+          key={item.name}
         >
           <AverageBox
+        
             title={item.name}
             titleNumber={item.number}
             icon={item.icon}
           />
-        </Box>
+        </Grid>
       ))}
-    </Box>
+    </Grid>
   );
 };
 

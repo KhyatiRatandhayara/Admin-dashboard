@@ -11,13 +11,16 @@ const Header = ({ isCollapsed, setIsCollapsed }) => {
     <MenuItem
       onClick={() => setIsCollapsed(!isCollapsed)}
       icon={isCollapsed ? <MenuOutlinedIcon /> : undefined}
+      style={{
+        backgroundColor: colors.primary[500],
+      }}
     >
       {!isCollapsed && (
         <Box display="flex" alignItems="center">
           <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
             <MenuOutlinedIcon />
           </IconButton>
-          <Typography variant="h3" color={colors.grey[100]}>
+          <Typography variant="h3" color={colors.grey[100]} >
             LOOP
           </Typography>
         </Box>

@@ -1,0 +1,39 @@
+[
+    {
+      "store": "Store 1",
+      "revenue": "1k",
+      "revenueNumber": 1000,
+      "color": "#4e79a7"
+    },
+    {
+      "store": "Store 2",
+      "revenue": "2k",
+      "revenueNumber": 2000,
+      "color": "#f28e2c"
+    },
+    {
+      "store": "Store 3",
+      "revenue": "3k",
+      "revenueNumber": 3000,
+      "color": "#76b7b2"
+    },
+    {
+      "store": "Store 4",
+      "revenue": "4k",
+      "revenueNumber": 4000,
+      "color": "#af7aa1"
+    },
+    {
+      "store": "Store 5",
+      "revenue": "6k",
+      "revenueNumber": 6000,
+      "color": "#edc949"
+    },
+    {
+      "store": "Store 6",
+      "revenue": "5k",
+      "revenueNumber": 5000,
+      "color": "#bab0ab"
+    }
+  ]
+  

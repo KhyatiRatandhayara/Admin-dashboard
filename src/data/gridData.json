@@ -1,0 +1,14 @@
+{
+    "rows": [
+      { "col1": "Cigarettes", "col2": "Instock" },
+      { "col1": "Beer", "col2": "Out of stock" },
+      { "col1": "Wine", "col2": "Instock" },
+      { "col1": "Hat dispensed beverage", "col2": "Out of stock" },
+      { "col1": "Frozen dispensed beverage", "col2": "Instock" }
+    ],
+    "columns": [
+      { "field": "col1", "headerName": "Item Category", "width": 150 },
+      { "field": "col2", "headerName": "Stock Status", "width": 150 }
+    ]
+  }
+  

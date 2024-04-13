@@ -13,7 +13,10 @@ const TotalRevenueGraph = () => {
           Total Revenue
         </Typography>
       </Grid>
-      <BarChart />
+
+      <Grid item>
+        <BarChart />
+      </Grid>
     </Grid>
   );
 };

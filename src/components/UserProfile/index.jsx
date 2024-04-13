@@ -8,7 +8,7 @@ const UserProfile = () => {
   return (
     <Box display="flex" justifyContent="flex-end" alignItems="center">
       <Typography variant="h5" color={colors.greenAccent[500]}>
-        VP Fancy Admin
+        Admin
       </Typography>
       <img
         alt="profile-user"

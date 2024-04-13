@@ -22,7 +22,6 @@ const CustomDatePicker = ({ type }) => {
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <DemoItem label={`select date ${type}`}>
         <DatePicker
-       
           slotProps={{
             field: { clearable: true, onClear: () => setCleared(true) },
           }}

@@ -8,11 +8,10 @@ const SalesCategory = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   return (
-    <Grid container p={"10px"}>
+    <Grid container>
       <Typography variant="h4" sx={{ color: colors.grey[100] }}>
         Sales by category
       </Typography>
-
       <PieChart />
     </Grid>
   );

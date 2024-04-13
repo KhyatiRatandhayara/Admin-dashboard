@@ -1,35 +1,48 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Sidebar, Menu } from "react-pro-sidebar";
-import { Box, useTheme} from "@mui/material";
+import { Box, useTheme, useMediaQuery } from "@mui/material";
 import { tokens } from "../../theme";
 import menuItems from "../../data/sideBarData.json";
 import CustomMenuItem from "../CustomMenuItem";
 import Header from "../../components/Header";
+import ThemeToggle from "../../components/Theme/ThemeToggle";
 
-const Sidebar1 = () => {
+const CustomSidebar = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [selected, setSelected] = useState("Dashboard");
 
+  useEffect(() => {
+    isMobile ? setIsCollapsed(true) : setIsCollapsed(false);
+  }, [isMobile]);
+
   return (
-    <Sidebar collapsed={isCollapsed} backgroundColor={colors.primary[500]}>
-      <Menu iconShape="square">
-      <Header isCollapsed={isCollapsed} setIsCollapsed={setIsCollapsed} />
-        <Box paddingLeft={isCollapsed ? undefined : "15%"}>
-          {menuItems.map((menuItem) => (
-            <CustomMenuItem
-              key={menuItem.name}
-              title={menuItem.name}
-              icon={menuItem.icon}
-              selected={selected}
-              setSelected={setSelected}
-            />
-          ))}
-        </Box>
-      </Menu>
-    </Sidebar>
+    <Box sx={{ backgroundColor: colors.primary[500] }}>
+      <Sidebar collapsed={isCollapsed} style={{ height: "auto" }}>
+        <Menu iconShape="square" >
+          <Header isCollapsed={isCollapsed} setIsCollapsed={setIsCollapsed} />
+          <Box
+            paddingLeft={isCollapsed ? undefined : "10%"}
+            paddingRight={isCollapsed ? "10%" : undefined}
+            backgroundColor={colors.primary[500]}
+          >
+            {menuItems.map((menuItem) => (
+              <CustomMenuItem
+                key={menuItem.name}
+                title={menuItem.name}
+                icon={menuItem.icon}
+                selected={selected}
+                setSelected={setSelected}
+              />
+            ))}
+            <ThemeToggle />
+          </Box>
+        </Menu>
+      </Sidebar>
+    </Box>
   );
 };
 
-export default Sidebar1;
+export default CustomSidebar;

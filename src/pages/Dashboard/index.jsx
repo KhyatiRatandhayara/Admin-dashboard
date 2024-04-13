@@ -1,4 +1,4 @@
-import { Box, Divider, useTheme } from "@mui/material";
+import { Grid, Box, Divider, useTheme } from "@mui/material";
 import UserProfile from "../../components/UserProfile";
 import FilterSection from "../../components/FilterSection";
 import AverageDetails from "../../components/AverageDetails";
@@ -6,39 +6,54 @@ import TotalRevenueGraph from "../../components/TotalRevenueGraph";
 import PopularSales from "../../components/PopularSales";
 import SalesCategory from "../../components/SalesCategory";
 import StockWeather from "../../components/StockWeather";
-import CustomBox from "../../components/CustomBox";
-import Boxspan from "../../components/Boxspan";
+import StoresRevenue from "../../components/StoresRevenue";
+import { tokens } from "../../theme";
 
 const Dashboard = () => {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
   return (
     <>
       <UserProfile />
       <Divider flexItem />
-
       <FilterSection />
-
       <AverageDetails />
-      <Box marginTop={"30px"}></Box>
-      <CustomBox>
-        <Boxspan spanSize={6} shade={400} alignment={"center"}>
+      <Box marginTop={3}></Box>
+      <Grid container spacing={2} gridTemplateColumns="repeat(12, 1fr)">
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={6}
+          backgroundColor={colors.primary[400]}
+          alignment="center"
+        >
           <TotalRevenueGraph />
-        </Boxspan>
-        <Boxspan spanSize={6} shade={400} alignment={"center"}>
+        </Grid>
+        <Grid item xs={12} sm={12} md={6} backgroundColor={colors.primary[400]}>
           <PopularSales />
-        </Boxspan>
-      </CustomBox>
+        </Grid>
+      </Grid>
 
-      <Box marginTop={"30px"}></Box>
-
-      <CustomBox >
-        <Boxspan spanSize={4} shade={400} alignment={"center"}>
+      <Box marginTop={3}></Box>
+      <Grid
+        container
+        justifyContent="center"
+        gridTemplateColumns="repeat(12, 1fr)"
+        gridAutoRows="100px"
+        spacing={1}
+      >
+        <Grid item xs={12} sm={12} md={4} backgroundColor={colors.primary[400]}>
           <SalesCategory />
-        </Boxspan>
-        <Boxspan spanSize={4} shade={400} alignment={"center"}>
+        </Grid>
+
+        <Grid item xs={12} sm={12} md={4} backgroundColor={colors.primary[400]}>
           <StockWeather />
-        </Boxspan>
-        <Boxspan spanSize={4} shade={400} alignment={"center"}></Boxspan>
-      </CustomBox>
+        </Grid>
+        <Grid item xs={12} sm={12} md={4} backgroundColor={colors.primary[400]}>
+          <StoresRevenue />
+        </Grid>
+      </Grid>
     </>
   );
 };

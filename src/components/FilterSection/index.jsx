@@ -1,36 +1,53 @@
-import { Box, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import { useTheme } from "@emotion/react";
 import CustomDatePicker from "../CustomDatePicker";
 import CustomDropdown from "../CustomDropdown";
 import { tokens } from "../../theme";
-import Boxspan from "../Boxspan";
 
 const FilterSection = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   return (
-    <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}>
-      <Boxspan spanSize={6} shade={0} alignment={"left"}>
+    <Grid container gridTemplateColumns="repeat(12, 1fr)" gridAutoRows="300px">
+      <Grid
+        item
+        xs={12}
+        sm={12}
+        md={6}
+        color={colors.grey[100]}
+        alignment="left"
+      >
         <Typography variant="h3" color={colors.grey[100]}>
           Dashboard
         </Typography>
-      </Boxspan>
-      <Box gridColumn="span 6">
-        <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}>
-          <Boxspan spanSize={3} shade={0} alignment={"center"}></Boxspan>
-          <Boxspan spanSize={3} shade={0} alignment={"center"}>
+      </Grid>
+      <Grid
+        item
+        xs={12}
+        sm={12}
+        md={6}
+        color={colors.grey[100]}
+        alignment="left"
+      >
+        <Grid
+          container
+          spacing={2}
+          gridTemplateColumns="repeat(12, 1fr)"
+          gridAutoRows="300px"
+        >
+          <Grid item xs={12} sm={6} md={3} alignment="center"></Grid>
+          <Grid item xs={12} sm={12} md={3} alignment="center">
             <CustomDropdown />
-          </Boxspan>
-          <Boxspan spanSize={3} shade={0} alignment={"center"}>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} alignment="center">
             <CustomDatePicker type="from" />
-          </Boxspan>
-          <Boxspan spanSize={3} shade={0} alignment={"center"}>
-            {" "}
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} alignment="center">
             <CustomDatePicker type="to" />
-          </Boxspan>
-        </Box>
-      </Box>
-    </Box>
+          </Grid>
+        </Grid>
+      </Grid>
+    </Grid>
   );
 };
 

@@ -1,32 +1,32 @@
 [
-    {
-      "itemName": "Item name 1",
-      "salesAmount": "$856.60",
-      "quantity": "99.64",
-      "SKUStockRange": "Dark"
-    },
-    {
-      "itemName": "Item name 2",
-      "salesAmount": "$282.45",
-      "quantity": "51.18",
-      "SKUStockRange": "Dark"
-    },
-    {
-      "itemName": "Item name 3",
-      "salesAmount": "$395.73",
-      "quantity": "136.13",
-      "SKUStockRange": "Medium"
-    },
-    {
-      "itemName": "Item name 4",
-      "salesAmount": "$37.56",
-      "quantity": "7.04",
-      "SKUStockRange": "Others"
-    },
-    {
-      "itemName": "Item name 5",
-      "salesAmount": "$590.50",
-      "quantity": "294.65",
-      "SKUStockRange": "Others"
-    }
-  ]
+  {
+    "itemName": "Item name 1",
+    "salesAmount": "$856.60",
+    "quantity": "99.64",
+    "SKUStockRange": 30
+  },
+  {
+    "itemName": "Item name 2",
+    "salesAmount": "$282.45",
+    "quantity": "51.18",
+    "SKUStockRange": 30
+  },
+  {
+    "itemName": "Item name 3",
+    "salesAmount": "$395.73",
+    "quantity": "136.13",
+    "SKUStockRange": 60
+  },
+  {
+    "itemName": "Item name 4",
+    "salesAmount": "$37.56",
+    "quantity": "7.04",
+    "SKUStockRange": 80
+  },
+  {
+    "itemName": "Item name 5",
+    "salesAmount": "$590.50",
+    "quantity": "294.65",
+    "SKUStockRange": 80
+  }
+]

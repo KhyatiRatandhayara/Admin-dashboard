@@ -11,10 +11,10 @@ const ThemeToggle = () => {
     <Switch
       checked={theme.palette.mode === "light"}
       onChange={colorMode.toggleColorMode}
-      color="default"
-      icon={<img src={iconsImages.darkModeIcon} />}
-      checkedIcon={<img src={iconsImages.lightModeIcon} />}
+      icon={<img src={iconsImages.darkModeIcon}  alt="Dark Mode Icon" style={{ width: "100%", height: "100%" }}/>}
+      checkedIcon={<img src={iconsImages.lightModeIcon}  alt="Light Mode Icon" style={{ width: "100%", height: "100%" }}/>}
       inputProps={{ "aria-label": "toggle theme" }}
+      sx={{ width: "60%", height: "inherit", padding:"110px" }}
     />
   );
 };

@@ -26,7 +26,8 @@
     {
       "name": "Settings",
       "icon": "/assets/icons/settings.png"
-    },
+    }
+    ,
     {
       "name": "Theme",
       "icon": "/assets/icons/theme.png"

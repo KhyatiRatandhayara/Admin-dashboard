@@ -1,9 +1,8 @@
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext } from "./theme";
-import Sidebar from "./layout/Sidebar";
 import useMode from "./utils/hooks/useMode";
 import Router from "./Routers/Router";
-import Dashboard from "./pages/Dashboard";
+import CustomSidebar from "./layout/Sidebar";
 
 
 function App() {
@@ -14,10 +13,8 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <div className="app">
-          <Sidebar />
+        <CustomSidebar />
           <main className="content">
-            <Dashboard />
-           
           <Router />
           </main>
         </div>
