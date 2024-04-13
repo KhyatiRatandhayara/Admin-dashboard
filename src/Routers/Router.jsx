@@ -6,6 +6,7 @@ import Stores from "../pages/Stores";
 import Campaign from "../pages/Campaign";
 import Notifications from "../pages/Notifications";
 import Settings from "../pages/Settings";
+import NotFoundComponent from "../components/NotFoundComponent";
 
 const Router = () => {
   return (
@@ -17,6 +18,7 @@ const Router = () => {
       <Route path="/campaign" element={<Campaign />} />
       <Route path="/notifications" element={<Notifications />} />
       <Route path="/settings" element={<Settings />} />
+      <Route path="*" element={<NotFoundComponent />} />
     </Routes>
   );
 };
